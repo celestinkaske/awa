@@ -46,11 +46,44 @@ function App() {
       </li>
     </ul>
     <div className="border-l border-r border-b p-4">
-      {activeTab === 0 && <div>Tab 1 content</div>}
-      {activeTab === 1 && <div>Tab 2 content</div>}
-      {activeTab === 2 && <div>Tab 3 content</div>}
-      {activeTab === 3 && <div>Tab 4 content</div>}
-      {activeTab === 4 && <div>Tab 5 content</div>}
+      {activeTab === 0 && <div><h2 className="flex justify-center text-lg font-semibold mb-2">Your Pillars</h2>
+    <table className="w-full">
+      <tbody>
+        <tr>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Health</div>
+          </td>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Work</div>
+          </td>
+        </tr>
+        <tr>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Hobby</div>
+          </td>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Sport</div>
+          </td>
+        </tr>
+        <tr>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Family</div>
+          </td>
+          <td className="p-4 border">
+            <div className="flex justify-center items-center h-24 bg-gray-200">Friends</div>
+          </td>
+        </tr>
+      </tbody>
+    </table></div>}
+      {activeTab === 1 && <div><h2 className="flex justify-center text-lg font-semibold mb-2">Notes</h2></div>}
+      {activeTab === 2 && <div><h2 className="flex justify-center text-lg font-semibold mb-2">Analyse </h2></div>}
+      {activeTab === 3 && <div><h2 className="flex justify-center text-lg font-semibold mb-2">Sounds</h2></div>}
+      {activeTab === 4 && (
+          <div>
+            <h2 className="flex justify-center text-lg font-semibold mb-2">Your Settings</h2>
+         
+          </div>
+        )}
     </div>
   </div>
 );
