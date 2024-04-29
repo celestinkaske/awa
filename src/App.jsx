@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
+import { TabHeader } from "./components/TabHeader";
 
 function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -39,7 +40,7 @@ function App() {
           }`}
           onClick={() => handleTabClick(0)}
         >
-          <a className="inline-block py-2 px-4">Home</a>
+          <TabHeader>Home</TabHeader>
         </li>
         <li
           className={`-mb-px flex-1 ${
@@ -49,7 +50,7 @@ function App() {
           }`}
           onClick={() => handleTabClick(1)}
         >
-          <a className="inline-block py-2 px-4">Notes</a>
+          <TabHeader>Notes</TabHeader>
         </li>
         <li
           className={`-mb-px flex-1 ${
@@ -59,7 +60,7 @@ function App() {
           }`}
           onClick={() => handleTabClick(2)}
         >
-          <a className="inline-block py-2 px-4">Analyse</a>
+          <TabHeader>Analyse</TabHeader>
         </li>
         <li
           className={`-mb-px flex-1 ${
@@ -69,7 +70,7 @@ function App() {
           }`}
           onClick={() => handleTabClick(3)}
         >
-          <a className="inline-block py-2 px-4">Sounds</a>
+          <TabHeader>Sounds</TabHeader>
         </li>
         <li
           className={`-mb-px flex-1 ${
@@ -79,7 +80,7 @@ function App() {
           }`}
           onClick={() => handleTabClick(4)}
         >
-          <a className="inline-block py-2 px-4">Settings</a>
+          <TabHeader>Settings</TabHeader>
         </li>
       </ul>
       <div className="border-l border-r border-b p-4">
