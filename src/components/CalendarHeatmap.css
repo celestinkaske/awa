@@ -1,0 +1,52 @@
+.react-calendar-heatmap rect {
+    fill: #f0f0f0;
+  }
+
+.react-calendar-heatmap text {
+    font-size: 8px; 
+    fill: #333; 
+  }
+
+.react-calendar-heatmap rect {
+    width: 10px; /* Change to your desired width */
+    height: 10px; /* Change to your desired height */
+  } 
+  
+.react-calendar-heatmap rect {
+    margin: 4px; /* Change to your desired margin */
+  }
+
+/* Example: Change the color gradient of the heatmap */
+.color-github-0 {
+    fill: #ffffff; /* Change to your desired color */
+  }
+  .color-github-1 {
+    fill: #cce6ff; /* Change to your desired color */
+  }
+  /* Add more color classes as needed */
+
+/* Example: Customize tooltip appearance */
+.react-calendar-heatmap-tooltip {
+    /* Example styles */
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }
+  
+
+/* Example: Style weekday labels */
+.react-calendar-heatmap .weekday-label {
+    font-size: 12px; /* Change to your desired font size */
+    fill: #666666; /* Change to your desired color */
+  }
+
+/* Example: Style month labels */
+.react-calendar-heatmap .month-label {
+    font-size: 14px; /* Change to your desired font size */
+    fill: #333333; /* Change to your desired color */
+    font-weight: bold; /* Optionally change font weight */
+  }
