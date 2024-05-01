@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Header } from "./Header";
-import CustomCalendarHeatmap from "./CalendarHeatmap";
+import { Header } from "../components/Header";
+import CustomCalendarHeatmap from "../components/CalendarHeatmap";
 
 export default function HomeTab() {
   return (

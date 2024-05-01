@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
-import { TabHeader } from "./components/TabHeader";
 import CustomCalendarHeatmap from "./components/CalendarHeatmap";
-import HomeTab from "./components/HomeTab";
-import NotesTab from "./components/NotesTab";
-import AnalysisTab from "./components/AnalysisTab";
-import TabNavigation from "./components/TabNavigation";
+import HomeTab from "./pages/Home";
+import NotesTab from "./pages/Notes";
+import AnalysisTab from "./pages/Analysis";
+import TabNavigation from "./components/navigation/TabNavigation";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
