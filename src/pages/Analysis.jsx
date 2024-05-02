@@ -5,6 +5,7 @@ import DateFilter from "../components/DateFilter";
 import UnitKPI from "../components/kpis/UnitKPI";
 import EntriesKPI from "../components/kpis/EntriesKPI";
 import MoodKPI from "../components/kpis/MoodKPI";
+import PillarKPI from "../components/kpis/PillarKPi";
 
 const AnalysisTab = () => {
   return (
@@ -31,7 +32,9 @@ const AnalysisTab = () => {
           <MoodKPI></MoodKPI>
         </Card>
         {/* KPI 4 */}
-        <Card title="Most used pillar"></Card>
+        <Card title="Most used pillar">
+          <PillarKPI></PillarKPI>
+        </Card>
       </div>
 
       {/* Graphs section */}
