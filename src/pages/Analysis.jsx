@@ -2,22 +2,34 @@ import React, { useState } from "react";
 import { Header } from "../components/Header";
 import Card from "../components/Card";
 import DateFilter from "../components/DateFilter";
+import UnitKPI from "../components/kpis/UnitKPI";
+import EntriesKPI from "../components/kpis/EntriesKPI";
+import MoodKPI from "../components/kpis/MoodKPI";
 
 const AnalysisTab = () => {
   return (
     <div className="p-4">
       <Header>Analyse</Header>
       {/* Filter section */}
-      <DateFilter></DateFilter>
+      <div className="relative">
+        {" "}
+        <DateFilter></DateFilter>
+      </div>
 
       {/* KPIs section */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         {/* KPI 1 */}
-        <Card title="Total entries"></Card>
+        <Card title="Total entries">
+          <EntriesKPI value={50} total={100} />
+        </Card>
         {/* KPI 2 */}
-        <Card title="Average time spend"></Card>
+        <Card title="Average time spend">
+          <UnitKPI value="3:30" unit="s/day"></UnitKPI>
+        </Card>
         {/* KPI 3 */}
-        <Card title="Average feeling"></Card>
+        <Card title="Average feeling">
+          <MoodKPI></MoodKPI>
+        </Card>
         {/* KPI 4 */}
         <Card title="Most used pillar"></Card>
       </div>

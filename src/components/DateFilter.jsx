@@ -10,9 +10,9 @@ const DateFilter = () => {
   };
 
   return (
-    <div className="flex mb-4">
+    <div className="flex justify-end mb-4 w-full">
       <select
-        className="px-3 py-2 border border-gray-300 rounded-md mr-4"
+        className="border border-gray-300 rounded-md mr-4 ml-auto px-2 py-1"
         value={selectedFilter}
         onChange={(e) => handleFilterChange(e.target.value)}
       >
