@@ -5,7 +5,7 @@ const Card = ({ title, children }) => {
       <p className="text-xs font-light text-slate-500">
         For the selected timeframe
       </p>
-      <div>{children}</div>
+      <div className="overflow-hidden mx-h-60">{children}</div>
     </div>
   );
 };

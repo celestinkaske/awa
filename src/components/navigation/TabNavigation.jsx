@@ -31,7 +31,7 @@ const Tab = ({ children, active, onClick }) => {
       onClick={onClick}
     >
       <a
-        className="flex justify-center py-3 px-4"
+        className="flex justify-center py-6 "
         href={`#${children.toLowerCase()}`}
       >
         {children}

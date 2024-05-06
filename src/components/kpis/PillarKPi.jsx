@@ -1,35 +1,32 @@
 import React from "react";
-import healthIcon from "../assets/health.png";
-import workIcon from "../assets/work.png";
-import hobbyIcon from "../assets/hobby.png";
-import sportIcon from "../assets/sport.png";
-import familyIcon from "../assets/family.png";
-import friendsIcon from "../assets/friends.png";
 
 const PillarKPI = ({ mostUsedPillar }) => {
-  const getPillarIcon = (pillar) => {
+  // Der Dateiname des Bildes basierend auf der am häufigsten verwendeten Säule
+  const getImageFilename = (pillar) => {
     switch (pillar) {
       case "Health":
-        return healthIcon;
+        return "health.png";
       case "Work":
-        return workIcon;
+        return "work.png";
       case "Hobby":
-        return hobbyIcon;
+        return "hobby.png";
       case "Sport":
-        return sportIcon;
+        return "sport.png";
       case "Family":
-        return familyIcon;
+        return "family.png";
       case "Friends":
-        return friendsIcon;
+        return "friends.png";
       default:
-        return null;
+        return "default.png"; // Ein Standardbild für den Fall, dass keine Übereinstimmung gefunden wurde
     }
   };
 
+  // Der Pfad zum Bild im public-Ordner
+  const imagePath = `/images/${getImageFilename(mostUsedPillar)}`;
+
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center justify-center">
-      <img src={getPillarIcon(mostUsedPillar)} alt={mostUsedPillar} />
-      <span className="text-xl font-semibold mt-2">{mostUsedPillar}</span>
+    <div className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+      <img src={imagePath} alt={mostUsedPillar} className="h-16" />
     </div>
   );
 };
