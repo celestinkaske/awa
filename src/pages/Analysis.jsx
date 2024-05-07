@@ -8,7 +8,7 @@ import MoodKPI from "../components/kpis/MoodKPI";
 import PillarKPI from "../components/kpis/PillarKPi";
 import WordCloud from "../components/WordCloud";
 
-const AnalysisTab = () => {
+const Analysis = () => {
   const mostUsedPillar = "Health";
   const words = [
     { text: "Health", value: 100 },
@@ -92,4 +92,4 @@ const AnalysisTab = () => {
   );
 };
 
-export default AnalysisTab;
+export default Analysis;

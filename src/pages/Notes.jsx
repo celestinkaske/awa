@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Header } from "../components/Header";
 
-const NotesTab = () => {
+const Notes = () => {
   // State variables and functions related to notes
   const [selectedNote, setSelectedNote] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -125,4 +125,4 @@ const NotesTab = () => {
   );
 };
 
-export default NotesTab;
+export default Notes;

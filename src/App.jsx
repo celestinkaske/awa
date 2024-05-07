@@ -1,10 +1,18 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
 import { useState } from "react";
 import { Header } from "./components/Header";
 import CustomCalendarHeatmap from "./components/CalendarHeatmap";
-import HomeTab from "./pages/Home";
-import NotesTab from "./pages/Notes";
-import AnalysisTab from "./pages/Analysis";
 import TabNavigation from "./components/navigation/TabNavigation";
+import Home from "./pages/Home";
+import Notes from "./pages/Notes";
+import Analysis from "./pages/Analysis";
+import Sounds from "./pages/Sounds";
+import Settings from "./pages/Settings";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,19 +23,15 @@ function App() {
         setActiveIndex={setActiveIndex}
       />
       <div className="border-l border-r border-b p-4">
-        {activeIndex === 0 && <HomeTab />}
-        {activeIndex === 1 && <NotesTab />}
-        {activeIndex === 2 && <AnalysisTab />}
-        {activeIndex === 3 && (
-          <div>
-            <Header>Sounds</Header>
-          </div>
-        )}
-        {activeIndex === 4 && (
-          <div>
-            <Header>Your Settings</Header>
-          </div>
-        )}
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Analysis" element={<Analysis />} />
+          <Route path="/Sounds" element={<Sounds />} />
+          <Route path="/Settings" element={<Settings />} />
+          <Route path="/" element={<Outlet />} />{" "}
+          {/* Add this route for child routes */}
+        </Routes>
       </div>
     </div>
   );

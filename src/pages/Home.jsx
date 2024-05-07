@@ -3,7 +3,7 @@ import { Header } from "../components/Header";
 import CustomCalendarHeatmap from "../components/CalendarHeatmap";
 import PillarTable from "../components/PillarTable";
 
-export default function HomeTab() {
+export default function Home() {
   return (
     <div>
       <Header>Your Pillars</Header>
