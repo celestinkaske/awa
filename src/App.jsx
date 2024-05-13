@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
+import { useState } from "react";
+import { Header } from "./components/Header";
+import CustomCalendarHeatmap from "./components/CalendarHeatmap";
+import TabNavigation from "./components/navigation/TabNavigation";
+import Home from "./pages/Home";
+import Notes from "./pages/Notes";
+import Analysis from "./pages/Analysis";
+import Sounds from "./pages/Sounds";
+import Settings from "./pages/Settings";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <TabNavigation
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
+      <div className="border-l border-r border-b p-4">
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Notes" element={<Notes />} />
+          <Route path="/Analysis" element={<Analysis />} />
+          <Route path="/Sounds" element={<Sounds />} />
+          <Route path="/Settings" element={<Settings />} />
+          <Route path="/" element={<Outlet />} />{" "}
+          {/* Add this route for child routes */}
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        This will become a daily helper!
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
